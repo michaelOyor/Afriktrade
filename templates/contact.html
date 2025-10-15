@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-3 p-5 text-white"
+                 style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+                <div class="card-body">
+                    <h1 class="h3 fw-bold mb-4 text-center">Contact Us</h1>
+
+                    <!-- Contact Details -->
+                    <div class="mb-4">
+                        <p><strong>Email:</strong> afriktradeofficial@gmail.com</p>
+                        <p><strong>Phone:</strong> +234 803 713 9136</p>
+                        <p><strong>Location:</strong> Abuja, Nigeria</p>
+                    </div>
+
+                    <!-- Form -->
+                    <form action="mailto:michealoyor@gmail.com" method="post" enctype="text/plain">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-semibold">Name</label>
+                            <input type="text" class="form-control shadow-sm border-0" id="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">Email</label>
+                            <input type="email" class="form-control shadow-sm border-0" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-semibold">Message</label>
+                            <textarea class="form-control shadow-sm border-0" id="message" rows="4"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-light text-success fw-bold px-4 shadow-sm">
+                                Send
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
