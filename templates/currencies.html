@@ -1,46 +1,29 @@
 {% extends 'base.html' %}
 {% block title %}Currencies{% endblock %}
 {% block content %}
-<div class="container my-5">
-    <div class="card shadow-lg border-0 rounded-3 p-5">
+<div class="container my-4">
+    <div class="card shadow-lg">
         <div class="card-body">
             <h1 class="h3 fw-bold mb-3 text-center text-success">Currency Exchange Rates</h1>
-            <p class="text-light text-center">
-                Approximate rates as of September 2025 (1 foreign unit to NGN).<br>
-                For Asia-Africa trade reference.
-            </p>
-
-            <div class="table-responsive mt-4">
+            <p class="text-light text-center">Approximate rates as of September 2025 (1 foreign unit to NGN).<br>For Asia-Africa trade reference.</p>
+            <div class="table-responsive mt-3">
                 <table class="table align-middle text-white text-center fw-semibold mb-0">
                     <thead>
                         <tr>
-                            <th class="p-3 rounded-start"
-                                style="background: linear-gradient(135deg, #11998e, #38ef7d);">
-                                Currency
-                            </th>
-                            <th class="p-3 rounded-end"
-                                style="background: linear-gradient(135deg, #56ab2f, #a8e063);">
-                                Rate (to NGN)
-                            </th>
+                            <th class="table-gradient-1">Currency</th>
+                            <th class="table-gradient-2">Rate (to NGN)</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for rate in rates %}
                         <tr>
-                            <td class="p-3"
-                                style="background: linear-gradient(135deg, #0f9b0f, #00b09b);">
-                                {{ rate.currency }}
-                            </td>
-                            <td class="p-3"
-                                style="background: linear-gradient(135deg, #76b852, #8DC26F);">
-                                {{ rate.rate }}
-                            </td>
+                            <td class="table-gradient-3">{{ rate.currency }}</td>
+                            <td class="table-gradient-4">{{ rate.rate }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
 </div>

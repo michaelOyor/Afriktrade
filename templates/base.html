@@ -5,77 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afriktrade - {% block title %}{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
- body {
-  font-family: Arial, sans-serif;
-  background-color: white;
-  color: Green;
-}
-
-.navbar {
-  padding: 2px 0;
-  background: linear-gradient(135deg, #E8E8E8, #4CAF50);
-}
-
-/* Navbar brand and links */
-.navbar .nav-link,
-.navbar .navbar-brand {
-  color: white !important;              /* Dark green text */
-  font-weight: 800;                         /* Extra bold */
-  text-shadow: 3px 3px 5px rgba(0,0,0,0.6); /* Thicker shadow */
-}
-
-/* Hover effect */
-.navbar .nav-link:hover,
-.navbar .navbar-brand:hover {
-  color: #064d06 !important; /* Darker green on hover */
-  text-shadow: 4px 4px 6px rgba(0,0,0,0.7); /* Stronger shadow on hover */
-}
-
-
-    .navbar-brand img { height: 40px; }
-    .footer { background-color: white; color: black; padding: 20px; text-align: center; }
-    .hero {
-        background: linear-gradient(135deg, #06350f, #4CAF50);
-        color: white;
-        padding: 150px;
-        text-align: center; /* Ensure this is included */
-        position: relative;
-        height: 80vh;
-        align-items: center;
-        justify-content: center;
-    }
-
-    </style>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-    <!-- Brand with logo -->
-    <a class="navbar-brand d-flex align-items-center" href="/">
-      <img src="{{ url_for('static', filename='images/AfriLogo.png') }}" alt="Afriktrade Logo" style="height:120px;" class="me-2">
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="/why-partner">Why Partner</a></li>
-        <li class="nav-item"><a class="nav-link" href="/strategic-goals">Strategic Goals</a></li>
-        <li class="nav-item"><a class="nav-link" href="/currencies">Currencies</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-        <!-- Add Login link -->
-        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="{{ url_for('static', filename='images/AfriLogo.png') }}" alt="Afriktrade Logo" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/why-partner">Why Partner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/strategic-goals">Strategic Goals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/currencies">Currencies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     {% block content %}{% endblock %}
     <footer class="footer">
         &copy; 2025 Afriktrade Limited. All rights reserved. "Together, we connect continents, empower businesses, and drive global growth."
