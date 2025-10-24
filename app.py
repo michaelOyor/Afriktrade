@@ -74,7 +74,7 @@ def contact():
             msg = MIMEText(email_content)
             msg['Subject'] = 'New Contact Form Submission'
             msg['From'] = os.getenv('EMAIL_ADDRESS')
-            msg['To'] = 'michealoyor@gmail.com'
+            msg['To'] = 'afriktradeofficial@gmail.com'
 
             with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
                 server.login(os.getenv('EMAIL_ADDRESS'), os.getenv('EMAIL_PASSWORD'))
